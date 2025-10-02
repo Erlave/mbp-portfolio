@@ -1,0 +1,35 @@
+# محیط مجازی
+venv/
+ENV/
+env/
+
+# فایل‌های کامپایل شده پایتون
+pycache/
+*.py[cod]
+*$py.class
+
+# پایگاه داده محلی (sqlite3)
+mbp_db.sqlite3
+
+# لاگ‌ها
+*.log
+
+# تنظیمات محلی یا محرمانه
+*.env
+.env.*
+
+
+# پوشه migration که خالیه
+*/migrations/pycache/
+*/migrations/*.pyc
+*/migrations/*.pyo
+
+# فایل‌های IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# سیستم عامل
+.DS_Store
+Thumbs.db
