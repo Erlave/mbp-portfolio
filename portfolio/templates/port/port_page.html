@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+
+{% block page_title %}portfolio{% endblock page_title %}
+
+
+{% block menu %}
+
+    <div class="fixed-menu">
+        <div class="menu-links mb-30 fz-18">
+            <a  data-tab="tab-1" href={% url "home" %}>
+                <span class="icon pe-7s-home">
+                </span>
+                <span class="text">
+                    خانه
+                </span>
+            </a>
+            <a class="active" data-tab="tab-2" href={% url "port" %}>
+                <span class="icon pe-7s-portfolio">
+                </span>
+                <span class="text">
+                    نمونه کارها
+                </span>
+            </a>
+            <a  href={% url "weblog" %}>
+                <span class="icon pe-7s-note">
+                </span>
+                <span class="text">
+                    وبلاگ
+                </span>
+            </a>
+            <a data-tab="tab-4" href={% url "con" %}>
+                <span class="icon pe-7s-map-marker">
+                </span>
+                <span class="text">
+                    تماس
+                </span>
+            </a>
+        </div>
+        <div class="menu-social">
+            <a href="#0">
+                <i class="fab fa-behance">
+                </i>
+            </a>
+            <a href="#0">
+                <i class="fab fa-dribbble">
+                </i>
+            </a>
+        </div>
+    </div>
+{% endblock menu %}
+
+{% block content %}
+
+        <section class="min-box pt-40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-10">
+
+                        <div class="min-sec " >
+                            <!-- ==================== Start portfolio ==================== -->
+                            <div class="portfolio pt-80 pb-80">
+                                <div class="sec-head mb-10 wow fadeIn">
+                                    <div class="sub-title-icon d-flex align-items-center">
+                                        <span class="icon pe-7s-portfolio">
+                                        </span>
+                                        <h6>
+                                            نمونه کارها من
+                                        </h6>
+                                    </div>
+                                    <h4 class="fz-28 text-u fw-600">
+                                        آثار برجسته
+                                    </h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 items wow fadeIn" data-wow-delay=".2s">
+                                        <div class="item">
+                                            <div class="img">
+                                                <img alt="" src="assets/imgs/works/2.jpg" />
+                                                <a class="link" href="project-details.html">
+                                                </a>
+                                            </div>
+                                            <div class="cont d-flex align-items-center">
+                                                <div>
+                                                    <h6>
+                                                        طراحی UI-ux
+                                                    </h6>
+                                                    <span class="tag">
+                                                        شکل
+                                                    </span>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <div class="arrow">
+                                                        <a href="project-details.html">
+                                                            <svg class="arrow-right" style="stroke-width: 2;"
+                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                                                                <line x1="0" x2="33" y1="16" y2="16">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
+                                                                </line>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 items wow fadeIn" data-wow-delay=".4s">
+                                        <div class="item">
+                                            <div class="img">
+                                                <img alt="" src="assets/imgs/works/6.jpg" />
+                                                <a class="link" href="project-details.html">
+                                                </a>
+                                            </div>
+                                            <div class="cont d-flex align-items-center">
+                                                <div>
+                                                    <h6>
+                                                        طراحی UI-ux
+                                                    </h6>
+                                                    <span class="tag">
+                                                        شکل
+                                                    </span>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <div class="arrow">
+                                                        <a href="project-details.html">
+                                                            <svg class="arrow-right" style="stroke-width: 2;"
+                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                                                                <line x1="0" x2="33" y1="16" y2="16">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
+                                                                </line>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 items wow fadeIn" data-wow-delay=".6s">
+                                        <div class="item">
+                                            <div class="img">
+                                                <img alt="" src="assets/imgs/works/7.jpg" />
+                                                <a class="link" href="project-details.html">
+                                                </a>
+                                            </div>
+                                            <div class="cont d-flex align-items-center">
+                                                <div>
+                                                    <h6>
+                                                        طراحی UI-ux
+                                                    </h6>
+                                                    <span class="tag">
+                                                        شکل
+                                                    </span>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <div class="arrow">
+                                                        <a href="project-details.html">
+                                                            <svg class="arrow-right" style="stroke-width: 2;"
+                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                                                                <line x1="0" x2="33" y1="16" y2="16">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
+                                                                </line>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 items wow fadeIn" data-wow-delay=".8s">
+                                        <div class="item">
+                                            <div class="img">
+                                                <img alt="" src="assets/imgs/works/3.jpg" />
+                                                <a class="link" href="project-details.html">
+                                                </a>
+                                            </div>
+                                            <div class="cont d-flex align-items-center">
+                                                <div>
+                                                    <h6>
+                                                        طراحی UI-ux
+                                                    </h6>
+                                                    <span class="tag">
+                                                        شکل
+                                                    </span>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <div class="arrow">
+                                                        <a href="project-details.html">
+                                                            <svg class="arrow-right" style="stroke-width: 2;"
+                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                                                                <line x1="0" x2="33" y1="16" y2="16">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
+                                                                </line>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 items wow fadeIn" data-wow-delay="1s">
+                                        <div class="item">
+                                            <div class="img">
+                                                <img alt="" src="assets/imgs/works/8.jpg" />
+                                                <a class="link" href="project-details.html">
+                                                </a>
+                                            </div>
+                                            <div class="cont d-flex align-items-center">
+                                                <div>
+                                                    <h6>
+                                                        طراحی UI-ux
+                                                    </h6>
+                                                    <span class="tag">
+                                                        شکل
+                                                    </span>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <div class="arrow">
+                                                        <a href="project-details.html">
+                                                            <svg class="arrow-right" style="stroke-width: 2;"
+                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                                                                <line x1="0" x2="33" y1="16" y2="16">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
+                                                                </line>
+                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
+                                                                </line>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ==================== End portfolio ==================== -->
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+{% endblock content %}

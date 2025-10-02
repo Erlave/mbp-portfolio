@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block page_title %}weblog{% endblock page_title %}
+
+
+{% block menu %}
+
+    <div class="fixed-menu">
+        <div class="menu-links mb-30 fz-18">
+            <a  data-tab="tab-1" href={% url "home" %}>
+                <span class="icon pe-7s-home">
+                </span>
+                <span class="text">
+                    خانه
+                </span>
+            </a>
+            <a  data-tab="tab-2" href={% url "port" %}>
+                <span class="icon pe-7s-portfolio">
+                </span>
+                <span class="text">
+                    نمونه کارها
+                </span>
+            </a>
+            <a class="active" href={% url "weblog" %}>
+                <span class="icon pe-7s-note">
+                </span>
+                <span class="text">
+                    وبلاگ
+                </span>
+            </a>
+            <a data-tab="tab-4" href={% url "con" %}>
+                <span class="icon pe-7s-map-marker">
+                </span>
+                <span class="text">
+                    تماس
+                </span>
+            </a>
+        </div>
+        <div class="menu-social">
+            <a href="#0">
+                <i class="fab fa-behance">
+                </i>
+            </a>
+            <a href="#0">
+                <i class="fab fa-dribbble">
+                </i>
+            </a>
+        </div>
+    </div>
+{% endblock menu %}
+
+{% block content %}
+
+        <section class="min-box pt-40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-10">
+
+                                                <div class="min-sec " id="tab-3">
+                            <!-- ==================== Start Blog ==================== -->
+                            <div class="blog pt-80 pb-80">
+                                <div class="sec-head mb-50 wow fadeIn">
+                                    <div class="sub-title-icon d-flex align-items-center">
+                                        <span class="icon pe-7s-note">
+                                        </span>
+                                        <h6>
+                                            وبلاگ های من
+                                        </h6>
+                                    </div>
+                                    <h4 class="fz-28 text-u fw-600">
+                                        آخرین اخبار
+                                    </h4>
+                                </div>
+                                <div>
+                                    <div class="item pb-50 mb-50 bord-thin-bottom wow fadeIn" data-wow-delay=".2s">
+                                        <div class="img">
+                                            <img alt="" src="assets/imgs/blog/1.jpg" />
+                                        </div>
+                                        <div class="cont mt-30">
+                                            <span class="date mb-15">
+                                                ۲۰ ژوئیه ۲۰۲۰
+                                            </span>
+                                            <h5 class="mb-15 fw-600">
+                                                <a href="blog-details.html">
+                                                    ۱۲ نکته برای رهبری یک شرکت خارق العاده
+                                                </a>
+                                            </h5>
+                                            <p>
+                                                بسیار جالب توجه به استقبال برطرف شد.بنابراین به سمت شمال با توجه به توجه
+                                                به خانواده ، توجه.تعالی با قاطعیت مرد و در عین حال تصور می شود که به طرز
+                                                چشمگیری در تضاد است.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item pb-50 mb-50 bord-thin-bottom wow fadeIn" data-wow-delay=".4s">
+                                        <div class="img">
+                                            <img alt="" src="assets/imgs/blog/2.jpg" />
+                                        </div>
+                                        <div class="cont mt-30">
+                                            <span class="date mb-15">
+                                                ۲۰ ژوئیه ۲۰۲۰
+                                            </span>
+                                            <h5 class="mb-15 fw-600">
+                                                <a href="blog-details.html">
+                                                    ۱۲ نکته برای رهبری یک شرکت خارق العاده
+                                                </a>
+                                            </h5>
+                                            <p>
+                                                بسیار جالب توجه به استقبال برطرف شد.بنابراین به سمت شمال با توجه به توجه
+                                                به خانواده ، توجه.تعالی با قاطعیت مرد و در عین حال تصور می شود که به طرز
+                                                چشمگیری در تضاد است.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item wow fadeIn" data-wow-delay=".6s">
+                                        <div class="img">
+                                            <img alt="" src="assets/imgs/blog/3.jpg" />
+                                        </div>
+                                        <div class="cont mt-30">
+                                            <span class="date mb-15">
+                                                ۲۰ ژوئیه ۲۰۲۰
+                                            </span>
+                                            <h5 class="mb-15 fw-600">
+                                                <a href="blog-details.html">
+                                                    ۱۲ نکته برای رهبری یک شرکت خارق العاده
+                                                </a>
+                                            </h5>
+                                            <p>
+                                                بسیار جالب توجه به استقبال برطرف شد.بنابراین به سمت شمال با توجه به توجه
+                                                به خانواده ، توجه.تعالی با قاطعیت مرد و در عین حال تصور می شود که به طرز
+                                                چشمگیری در تضاد است.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ==================== End Blog ==================== -->
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+{% endblock content %}

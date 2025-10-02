@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block page_title %}MBP{% endblock page_title %}
+    
+{% block menu %}
+
+    <div class="fixed-menu">
+        <div class="menu-links mb-30 fz-18">
+            <a class="active" data-tab="tab-1" href={% url "home" %}>
+                <span class="icon pe-7s-home">
+                </span>
+                <span class="text">
+                    خانه
+                </span>
+            </a>
+            <a data-tab="tab-2" href={% url "port" %}>
+                <span class="icon pe-7s-portfolio">
+                </span>
+                <span class="text">
+                    نمونه کارها
+                </span>
+            </a>
+            <a  href={% url "weblog" %}>
+                <span class="icon pe-7s-note">
+                </span>
+                <span class="text">
+                    وبلاگ
+                </span>
+            </a>
+            <a data-tab="tab-4" href={% url "con" %}>
+                <span class="icon pe-7s-map-marker">
+                </span>
+                <span class="text">
+                    تماس
+                </span>
+            </a>
+        </div>
+        <div class="menu-social">
+            <a href="#0">
+                <i class="fab fa-behance">
+                </i>
+            </a>
+            <a href="#0">
+                <i class="fab fa-dribbble">
+                </i>
+            </a>
+        </div>
+    </div>
+{% endblock menu %}
+
+
+{% block content %}
+    <main>
+        <!-- ==================== Start minbox ==================== -->
+        <section class="min-box pt-40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-10">
+                        <div class="min-sec current" id="tab-1">
+                            <!-- ==================== Start Hero ==================== -->
+                            {% include "homes/sec1.html" %}
+                            <!-- ==================== End Hero ==================== -->
+                            <!-- ==================== Start services ==================== -->
+                            {% include "homes/sec2.html" %}
+                            <!-- ==================== End Services ==================== -->
+                            <!-- ==================== Start Skills ==================== -->
+                            {% include "homes/sec3.html" %}
+                            <!-- ==================== End Skills ==================== -->
+                            <!-- ==================== Start Testimonials ==================== -->
+                            {% include "homes/sec4.html" %}
+                            <!-- ==================== End Testimonials ==================== -->
+
+                            {% comment %}  {% endcomment %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== End minbox ==================== -->
+    </main>
+{% endblock %}
+{% comment %} 
+
+ {% endcomment %}

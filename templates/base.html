@@ -31,7 +31,7 @@
     <!-- ==================== End progress-scroll-button ==================== -->
     <!-- ==================== Start Navbar ==================== -->
     {% render_partial 'home.views.header_componnent' %}
-    {% include "side_menu.html" %}
+    {% block menu %}{% endblock menu %}
     <!-- ==================== End Navbar ==================== -->
 {% block content %}
 {% endblock content %}
