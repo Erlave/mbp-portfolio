@@ -1,0 +1,44 @@
+{% load static %}
+{% load render_partial %}
+
+<html dir="rtl" lang="fa">
+
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+    <meta content="HTML5 Template Andrew Multi-Purpose " name="keywords" />
+    <meta content="Andrew - Multi-Purpose HTML5 Template" name="description" />
+    <meta content="" name="author" />
+    <!-- Title  -->
+    <title>
+        {% block page_title %}{% endblock page_title %}
+    </title>
+{% include "header_refrence.html" %}
+</head>
+
+<body id="home">
+    <!-- ==================== Start Loading ==================== -->
+    {% include "loading.html" %}
+
+    <!-- ==================== End Loading ==================== -->
+    <div class="cursor">
+    </div>
+    <!-- ==================== Start progress-scroll-button ==================== -->
+    {% include "pointer.html" %}
+
+    <!-- ==================== End progress-scroll-button ==================== -->
+    <!-- ==================== Start Navbar ==================== -->
+    {% render_partial 'home.views.header_componnent' %}
+    {% include "side_menu.html" %}
+    <!-- ==================== End Navbar ==================== -->
+{% block content %}
+{% endblock content %}
+    <!-- ==================== Start Footer ==================== -->
+    {% render_partial 'home.views.footer_componnent' %}
+    <!-- ==================== End Footer ==================== -->
+    {% include "footer_refrence.html" %}
+</body>
+
+</html>
