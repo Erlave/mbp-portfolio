@@ -4,15 +4,15 @@
                 <div class="col-lg-3 col-6">
                     <div>
                         <!-- Logo -->
-                        <a class="logo icon-img-70" href="#">
-                            <img alt="logo" src="assets/imgs/logo-light.png" />
+                        <a class="logo icon-img-70" href={% url "home" %}>
+                            <img alt="logo" src="{{setting.logo.url}}" />
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-6">
                     <div class="d-flex justify-content-end text-u">
                         <a href="mailto:abc@example.com">
-                            andrew@website.com
+                            {{setting.email}}
                         </a>
                     </div>
                 </div>

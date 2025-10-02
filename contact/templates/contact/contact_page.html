@@ -36,16 +36,7 @@
                 </span>
             </a>
         </div>
-        <div class="menu-social">
-            <a href="#0">
-                <i class="fab fa-behance">
-                </i>
-            </a>
-            <a href="#0">
-                <i class="fab fa-dribbble">
-                </i>
-            </a>
-        </div>
+        {% include "media.html" %}
     </div>
 {% endblock menu %}
 
@@ -90,7 +81,7 @@
                                                 </div>
                                                 <div class="ml-auto">
                                                     <h4>
-                                                        +۹۸۹۰۵۰۵۵۲۰۹۱
+                                                        {{setting.phone_number}}
                                                     </h4>
                                                 </div>
                                             </div>
@@ -108,8 +99,8 @@
                                                 </div>
                                                 <div class="ml-auto">
                                                     <h4>
-                                                        <a href="mailto:abc@example.com">
-                                                            andrew@website.com
+                                                        <a href=>
+                                                            {{setting.email}}
                                                         </a>
                                                     </h4>
                                                 </div>
@@ -128,7 +119,7 @@
                                                 </div>
                                                 <div class="ml-auto">
                                                     <h4>
-                                                        ایران ، تهران
+                                                        {{setting.address}}
                                                     </h4>
                                                 </div>
                                             </div>
