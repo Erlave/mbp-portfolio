@@ -10,98 +10,33 @@
                                     <h4 class="fz-28 text-u fw-600">
                                         مهارت ها                                    </h4>
                                 </div>
+                                
                                 <div class="row wow fadeIn">
-                                    <div class="col-md-6">
-                                        <div class="item mb-30">
-                                            <div class="d-flex align-items-center mb-30">
-                                                <div class="mr-30">
-                                                    <div class="img icon-img-40">
-                                                        <img alt="" src="assets/imgs/resume/s1.png" />
+                                    {% for ability in ability %}
+                                        <div class="col-md-6">
+                                            <div class="item mb-30">
+                                                <div class="d-flex align-items-center mb-30">
+                                                    <div class="mr-30">
+                                                        <div class="img icon-img-40">
+                                                            <i class="devicon-{{ ability.icon }}-plain colored " style="font-size: 30px;"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="fz-18">
+                                                            {{ability.title}}
+                                                        </h6>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <h6 class="fz-18">
-                                                        طراحی UI / UX
-                                                    </h6>
+                                                <div class="skill-progress">
+                                                    <span class="progres" data-value="{{ability.percent}}%">
+                                                    </span>
                                                 </div>
-                                            </div>
-                                            <div class="skill-progress">
-                                                <span class="progres" data-value="95%">
+                                                <span class="value">
+                                                    {{ability.percent}} ٪
                                                 </span>
                                             </div>
-                                            <span class="value">
-                                                ۹۵ ٪
-                                            </span>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="item mb-30">
-                                            <div class="d-flex align-items-center mb-30">
-                                                <div class="mr-30">
-                                                    <div class="img icon-img-40">
-                                                        <img alt="" src="assets/imgs/resume/s2.png" />
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h6 class="fz-18">
-                                                        توسعه
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div class="skill-progress">
-                                                <span class="progres" data-value="90%">
-                                                </span>
-                                            </div>
-                                            <span class="value">
-                                                ۹۰ ٪
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="item sm-mb30">
-                                            <div class="d-flex align-items-center mb-30">
-                                                <div class="mr-30">
-                                                    <div class="img icon-img-40">
-                                                        <img alt="" src="assets/imgs/resume/s3.png" />
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h6 class="fz-18">
-                                                        طراحی گرافیک
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div class="skill-progress">
-                                                <span class="progres" data-value="85%">
-                                                </span>
-                                            </div>
-                                            <span class="value">
-                                                ۸۵ ٪
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="item">
-                                            <div class="d-flex align-items-center mb-30">
-                                                <div class="mr-30">
-                                                    <div class="img icon-img-40">
-                                                        <img alt="" src="assets/imgs/resume/s5.png" />
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h6 class="fz-18">
-                                                        طرح
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div class="skill-progress">
-                                                <span class="progres" data-value="80%">
-                                                </span>
-                                            </div>
-                                            <span class="value">
-                                                ۸۰ ٪
-                                            </span>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
+                                
                             </div>

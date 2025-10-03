@@ -1,3 +1,6 @@
+{% load custom_tags %}
+
+
 <div class="testimonials pt-80 pb-80 bord-thin-top">
                                 <div class="sec-head mb-50 wow fadeIn">
                                     <div class="sub-title-icon d-flex align-items-center">
@@ -16,6 +19,7 @@
                                     <div class="swiper-container" data-swiper="container"
                                         id="content-carousel-container-unq-testim">
                                         <div class="swiper-wrapper">
+                                            {% for c in com %}
                                             <div class="swiper-slide">
                                                 <div class="item">
                                                     <div>
@@ -23,42 +27,31 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="rate-stars fz-12">
                                                                     <span class="rate main-color">
+                                                                        {% for _ in c.stars|times %}
                                                                         <i class="fas fa-star">
                                                                         </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
+                                                                        {% endfor %}
                                                                     </span>
-                                                                    <span class="fz-12 opacity-7 ml-10">
-                                                                        (۷۱ بررسی)
-                                                                    </span>
+                                                                    
                                                                 </div>
                                                             </div>
                                                             <p class="mt-15">
-                                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این
-                                                                بدون شک یکی از بهترین مواردی است که ما به اندازه کافی
-                                                                خوش شانس بوده ایم که روی آن کار کنیم ، توجه به جزئیات
-                                                                ظاهری در کل ، و تحویل بسیار بصری است.
+                                                                {{c.commet}}
                                                             </p>
                                                         </div>
                                                         <div class="d-flex align-items-center">
                                                             <div>
                                                                 <div class="img">
-                                                                    <img alt="" src="assets/imgs/testim/1.jpg" />
+                                                                    <img alt="" src={{c.image.url}} />
                                                                 </div>
                                                             </div>
                                                             <div class="ml-30">
                                                                 <div class="info">
                                                                     <h6 class="main-color">
-                                                                        لئونارد هایزر
+                                                                        {{c.name}}
                                                                     </h6>
                                                                     <span class="fz-13 mt-10 opacity-8">
-                                                                        مشتری راست چین
+                                                                        {{c.fro}}
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -66,206 +59,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="swiper-slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="cont mb-30">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="rate-stars fz-12">
-                                                                    <span class="rate main-color">
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                    </span>
-                                                                    <span class="fz-12 opacity-7 ml-10">
-                                                                        (۷۱ بررسی)
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="mt-15">
-                                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این
-                                                                بدون شک یکی از بهترین مواردی است که ما به اندازه کافی
-                                                                خوش شانس بوده ایم که روی آن کار کنیم ، توجه به جزئیات
-                                                                ظاهری در کل ، و تحویل بسیار بصری است.
-                                                            </p>
-                                                        </div>
-                                                        <div class="d-flex align-items-center">
-                                                            <div>
-                                                                <div class="img">
-                                                                    <img alt="" src="assets/imgs/testim/2.jpg" />
-                                                                </div>
-                                                            </div>
-                                                            <div class="ml-30">
-                                                                <div class="info">
-                                                                    <h6 class="main-color">
-                                                                        لئونارد هایزر
-                                                                    </h6>
-                                                                    <span class="fz-13 mt-10 opacity-8">
-                                                                        مشتری راست چین
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="cont mb-30">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="rate-stars fz-12">
-                                                                    <span class="rate main-color">
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                    </span>
-                                                                    <span class="fz-12 opacity-7 ml-10">
-                                                                        (۷۱ بررسی)
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="mt-15">
-                                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این
-                                                                بدون شک یکی از بهترین مواردی است که ما به اندازه کافی
-                                                                خوش شانس بوده ایم که روی آن کار کنیم ، توجه به جزئیات
-                                                                ظاهری در کل ، و تحویل بسیار بصری است.
-                                                            </p>
-                                                        </div>
-                                                        <div class="d-flex align-items-center">
-                                                            <div>
-                                                                <div class="img">
-                                                                    <img alt="" src="assets/imgs/testim/3.jpg" />
-                                                                </div>
-                                                            </div>
-                                                            <div class="ml-30">
-                                                                <div class="info">
-                                                                    <h6 class="main-color">
-                                                                        لئونارد هایزر
-                                                                    </h6>
-                                                                    <span class="fz-13 mt-10 opacity-8">
-                                                                        مشتری راست چین
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="cont mb-30">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="rate-stars fz-12">
-                                                                    <span class="rate main-color">
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                    </span>
-                                                                    <span class="fz-12 opacity-7 ml-10">
-                                                                        (۷۱ بررسی)
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="mt-15">
-                                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این
-                                                                بدون شک یکی از بهترین مواردی است که ما به اندازه کافی
-                                                                خوش شانس بوده ایم که روی آن کار کنیم ، توجه به جزئیات
-                                                                ظاهری در کل ، و تحویل بسیار بصری است.
-                                                            </p>
-                                                        </div>
-                                                        <div class="d-flex align-items-center">
-                                                            <div>
-                                                                <div class="img">
-                                                                    <img alt="" src="assets/imgs/testim/2.jpg" />
-                                                                </div>
-                                                            </div>
-                                                            <div class="ml-30">
-                                                                <div class="info">
-                                                                    <h6 class="main-color">
-                                                                        لئونارد هایزر
-                                                                    </h6>
-                                                                    <span class="fz-13 mt-10 opacity-8">
-                                                                        مشتری راست چین
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="cont mb-30">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="rate-stars fz-12">
-                                                                    <span class="rate main-color">
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                        <i class="fas fa-star">
-                                                                        </i>
-                                                                    </span>
-                                                                    <span class="fz-12 opacity-7 ml-10">
-                                                                        (۷۱ بررسی)
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                            <p class="mt-15">
-                                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این
-                                                                بدون شک یکی از بهترین مواردی است که ما به اندازه کافی
-                                                                خوش شانس بوده ایم که روی آن کار کنیم ، توجه به جزئیات
-                                                                ظاهری در کل ، و تحویل بسیار بصری است.
-                                                            </p>
-                                                        </div>
-                                                        <div class="d-flex align-items-center">
-                                                            <div>
-                                                                <div class="img">
-                                                                    <img alt="" src="assets/imgs/testim/3.jpg" />
-                                                                </div>
-                                                            </div>
-                                                            <div class="ml-30">
-                                                                <div class="info">
-                                                                    <h6 class="main-color">
-                                                                        لئونارد هایزر
-                                                                    </h6>
-                                                                    <span class="fz-13 mt-10 opacity-8">
-                                                                        مشتری راست چین
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                     <div class="swiper-pagination">

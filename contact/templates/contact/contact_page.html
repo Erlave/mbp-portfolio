@@ -63,9 +63,7 @@
                                         در تماس باشید!
                                     </h4>
                                 </div>
-                                <div class="google-map mb-50 wow fadeIn">
-                                    <iframe id="gmap_canvas"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12950.331018037285!2d51.31934880689841!3d35.761058923152206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfd420e8e1b11%3A0x4306cde5c02091c7!2sPunak%2C%20District%202%2C%20Tehran%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1729012944298!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
+
                                 <div class="info mb-100 wow fadeIn">
                                     <div class="row">
                                         <div class="col-lg-6">
@@ -141,27 +139,33 @@
                                     </h4>
                                 </div>
                                 <div class="full-width wow fadeIn">
-                                    <form action="https://ui-themez.smartinnovates.net/items/Gilb/contact.php"
-                                        id="contact-form" method="post">
+                                    <form method="post"  action="{% url 'con' %}" >
+                                        {% csrf_token %}
                                         <div class="messages">
                                         </div>
                                         <div class="controls row">
                                             <div class="col-lg-6">
                                                 <div class="form-group mb-30">
-                                                    <input id="form_name" name="name" placeholder="نام "
-                                                        required="required" type="text" />
+                                                    <label>
+                                                        نام شما
+                                                    </label>
+                                                    <input id="form_name" name="name" required="required" type="text" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group mb-30">
-                                                    <input id="form_email" name="email" placeholder="ایمیل شما"
-                                                        required="required" type="email" />
+                                                    <label>
+                                                        ایمیل شما
+                                                    </label>
+                                                    <input id="form_email" name="email" required="required" type="email" />
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <textarea id="form_message" name="message"
-                                                        placeholder="پیام شما" required="required"></textarea>
+                                                    <label>
+                                                        پیام شما
+                                                    </label>
+                                                    <textarea id="form_message" name="massage" required="required"></textarea>
                                                 </div>
                                                 <div class="mt-30">
                                                     <button type="submit">

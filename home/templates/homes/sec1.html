@@ -3,40 +3,27 @@
                                     <h6>
                                         <span>
                                         </span>
-                                        آماده برای پروژه های فریلنسری
+                                        {{home.status}}
                                     </h6>
                                     <h1>
-                                        سلام، 
+                                        {{home.title_1_of_3}}
                                         <br />
-                                        پارسا هستم!
+                                        {{home.title_2_of_3}}
                                     </h1>
                                     <div class="d-flex align-items-center mt-30">
+                                        {% for work in work %}
                                         <div class="mr-15">
                                             <div class="feat">
                                                 <span>
-                                                    طراح UI/UX
+                                                    {{work.title}}
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="mr-15">
-                                            <div class="feat">
-                                                <span>
-                                                    توسعه دهنده فرانت‌اند
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="feat">
-                                                <span>
-                                                    طراح محصول
-                                                </span>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
                                     <div class="text mt-30">
                                         <p>
-                                            من از تبدیل مشکلات پیچیده به طرح های ساده ، زیبا و بصری لذت می برم.هدف من
-                                            این است که پیام و هویت خود را به خلاق ترین روش به مشتریان خود نمایش دهید.
+                                            {{home.descreption}}
                                         </p>
                                     </div>
                                 </div>
