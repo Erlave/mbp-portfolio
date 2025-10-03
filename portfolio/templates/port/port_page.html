@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block page_title %}portfolio{% endblock page_title %}
 
 
@@ -42,217 +42,382 @@
 
 {% block content %}
 
-        <section class="min-box pt-40">
+    <main class="pt-80">
+        <!-- ==================== Start portfolio ==================== -->
+        <section class="portfolio section-padding">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-10">
-
-                        <div class="min-sec " >
-                            <!-- ==================== Start portfolio ==================== -->
-                            <div class="portfolio pt-80 pb-80">
-                                <div class="sec-head mb-10 wow fadeIn">
-                                    <div class="sub-title-icon d-flex align-items-center">
-                                        <span class="icon pe-7s-portfolio">
-                                        </span>
-                                        <h6>
-                                            نمونه کارها من
-                                        </h6>
-                                    </div>
-                                    <h4 class="fz-28 text-u fw-600">
-                                        آثار برجسته
-                                    </h4>
+                <div class="sec-head mb-40">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="d-inline-block">
+                                <div class="sub-title-icon d-flex align-items-center">
+                                    <span class="icon pe-7s-portfolio">
+                                    </span>
+                                    <h6>
+                                        نمونه کارهای من
+                                    </h6>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-6 items wow fadeIn" data-wow-delay=".2s">
-                                        <div class="item">
-                                            <div class="img">
-                                                <img alt="" src="assets/imgs/works/2.jpg" />
-                                                <a class="link" href="project-details.html">
-                                                </a>
-                                            </div>
-                                            <div class="cont d-flex align-items-center">
-                                                <div>
-                                                    <h6>
-                                                        طراحی UI-ux
-                                                    </h6>
-                                                    <span class="tag">
-                                                        شکل
-                                                    </span>
-                                                </div>
-                                                <div class="ml-auto">
-                                                    <div class="arrow">
-                                                        <a href="project-details.html">
-                                                            <svg class="arrow-right" style="stroke-width: 2;"
-                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                                <line x1="0" x2="33" y1="16" y2="16">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                                </line>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            </div>
+                            <h3>
+                                {{title.title}}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="row">
+                        {% for port in portfolio %}
+                        <div class="col-lg-4 items">
+                            <div class="item">
+                                <div class="img">
+                                    <img alt="" src={{port.img.url}} />
+                                    {% if port.url_github %}
+                                    <a class="link" href={% url 'portfolio_detail' port.slug %}>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                                <div class="cont d-flex align-items-center">
+                                    <div>
+                                        <h6>
+                                            {{port.title}}
+                                        </h6>
+
+
+                                        {% if port.type1 %}
+                                        <span class="tag">
+                                            {{port.type1}}
+                                        </span>
+                                        {% endif %}
+
+                                        {% if port.type2 %}
+                                        <span class="tag">
+                                            {{port.type2}}
+                                        </span>
+                                        {% endif %}
+
+                                        {% if port.type3 %}
+                                        <span class="tag">
+                                            {{port.type3}}
+                                        </span>
+                                        {% endif %}
+
+                                        {% if port.type4 %}
+                                        <span class="tag">
+                                            {{port.type4}}
+                                        </span>
+                                        {% endif %}
+                                        
+                                    </div>
+                                    
+                                    <div class="ml-auto">
+                                        <div class="arrow">
+                                            <a href={% url 'portfolio_detail' port.slug %}>
+                                                <svg class="arrow-right" style="stroke-width: 2;"
+                                                    viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                                                    <line x1="0" x2="33" y1="16" y2="16">
+                                                    </line>
+                                                    <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
+                                                    </line>
+                                                    <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
+                                                    </line>
+                                                </svg>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 items wow fadeIn" data-wow-delay=".4s">
-                                        <div class="item">
-                                            <div class="img">
-                                                <img alt="" src="assets/imgs/works/6.jpg" />
-                                                <a class="link" href="project-details.html">
-                                                </a>
-                                            </div>
-                                            <div class="cont d-flex align-items-center">
-                                                <div>
-                                                    <h6>
-                                                        طراحی UI-ux
-                                                    </h6>
-                                                    <span class="tag">
-                                                        شکل
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== End portfolio ==================== -->
+        <!-- ==================== Start Testimonials ==================== -->
+        {% comment %} <section class="testimonials section-padding pt-0">
+            <div class="container with-pad">
+                <div class="sec-head mb-80">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="d-inline-block">
+                                <div class="sub-title-icon d-flex align-items-center">
+                                    <span class="icon pe-7s-chat">
+                                    </span>
+                                    <h6>
+                                        نظرات مشتریان
+                                    </h6>
+                                </div>
+                            </div>
+                            <h3>
+                                مشتریان من راجع به من چه می‌گویند
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="testim-swiper" data-carousel="swiper" data-item="3" data-space="20" data-speed="1000">
+                    <div class="swiper-container" data-swiper="container" id="content-carousel-container-unq-testim">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div>
+                                        <div class="cont mb-30">
+                                            <div class="d-flex align-items-center">
+                                                <div class="rate-stars fz-12">
+                                                    <span class="rate main-color">
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                    </span>
+                                                    <span class="fz-12 opacity-7 ml-10">
+                                                        (۷۱ نظر)
                                                     </span>
                                                 </div>
-                                                <div class="ml-auto">
-                                                    <div class="arrow">
-                                                        <a href="project-details.html">
-                                                            <svg class="arrow-right" style="stroke-width: 2;"
-                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                                <line x1="0" x2="33" y1="16" y2="16">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                                </line>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
                                             </div>
+                                            <p class="mt-15">
+                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این بدون شک یکی از
+                                                بهترین مواردی است که ما به اندازه کافی خوش شانس بوده ایم که روی آن کار
+                                                کنیم ، توجه به جزئیات ظاهری در کل ، و تحویل بسیار بصری است.
+                                            </p>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12 items wow fadeIn" data-wow-delay=".6s">
-                                        <div class="item">
-                                            <div class="img">
-                                                <img alt="" src="assets/imgs/works/7.jpg" />
-                                                <a class="link" href="project-details.html">
-                                                </a>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <div class="img">
+                                                    <img alt="" src="assets/imgs/testim/1.jpg" />
+                                                </div>
                                             </div>
-                                            <div class="cont d-flex align-items-center">
-                                                <div>
-                                                    <h6>
-                                                        طراحی UI-ux
+                                            <div class="ml-30">
+                                                <div class="info">
+                                                    <h6 class="main-color">
+                                                        پارسا 
                                                     </h6>
-                                                    <span class="tag">
-                                                        شکل
+                                                    <span class="fz-13 mt-10 opacity-8">
+                                                        مدیر فنی اکالا
                                                     </span>
-                                                </div>
-                                                <div class="ml-auto">
-                                                    <div class="arrow">
-                                                        <a href="project-details.html">
-                                                            <svg class="arrow-right" style="stroke-width: 2;"
-                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                                <line x1="0" x2="33" y1="16" y2="16">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                                </line>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 items wow fadeIn" data-wow-delay=".8s">
-                                        <div class="item">
-                                            <div class="img">
-                                                <img alt="" src="assets/imgs/works/3.jpg" />
-                                                <a class="link" href="project-details.html">
-                                                </a>
-                                            </div>
-                                            <div class="cont d-flex align-items-center">
-                                                <div>
-                                                    <h6>
-                                                        طراحی UI-ux
-                                                    </h6>
-                                                    <span class="tag">
-                                                        شکل
-                                                    </span>
-                                                </div>
-                                                <div class="ml-auto">
-                                                    <div class="arrow">
-                                                        <a href="project-details.html">
-                                                            <svg class="arrow-right" style="stroke-width: 2;"
-                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                                <line x1="0" x2="33" y1="16" y2="16">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                                </line>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 items wow fadeIn" data-wow-delay="1s">
-                                        <div class="item">
-                                            <div class="img">
-                                                <img alt="" src="assets/imgs/works/8.jpg" />
-                                                <a class="link" href="project-details.html">
-                                                </a>
-                                            </div>
-                                            <div class="cont d-flex align-items-center">
-                                                <div>
-                                                    <h6>
-                                                        طراحی UI-ux
-                                                    </h6>
-                                                    <span class="tag">
-                                                        شکل
-                                                    </span>
-                                                </div>
-                                                <div class="ml-auto">
-                                                    <div class="arrow">
-                                                        <a href="project-details.html">
-                                                            <svg class="arrow-right" style="stroke-width: 2;"
-                                                                viewbox="0 0 34.2 32.3" x="0px" xml:space="preserve"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                                                <line x1="0" x2="33" y1="16" y2="16">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.2" y1="0.7" y2="16.5">
-                                                                </line>
-                                                                <line x1="17.3" x2="33.5" y1="31.6" y2="15.4">
-                                                                </line>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- ==================== End portfolio ==================== -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div>
+                                        <div class="cont mb-30">
+                                            <div class="d-flex align-items-center">
+                                                <div class="rate-stars fz-12">
+                                                    <span class="rate main-color">
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                    </span>
+                                                    <span class="fz-12 opacity-7 ml-10">
+                                                        (۷۱ نظر)
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="mt-15">
+                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این بدون شک یکی از
+                                                بهترین مواردی است که ما به اندازه کافی خوش شانس بوده ایم که روی آن کار
+                                                کنیم ، توجه به جزئیات ظاهری در کل ، و تحویل بسیار بصری است.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <div class="img">
+                                                    <img alt="" src="assets/imgs/testim/2.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="ml-30">
+                                                <div class="info">
+                                                    <h6 class="main-color">
+                                                        اشکان میرزایی
+                                                    </h6>
+                                                    <span class="fz-13 mt-10 opacity-8">
+                                                        مدیر سایت متمم
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div>
+                                        <div class="cont mb-30">
+                                            <div class="d-flex align-items-center">
+                                                <div class="rate-stars fz-12">
+                                                    <span class="rate main-color">
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                    </span>
+                                                    <span class="fz-12 opacity-7 ml-10">
+                                                        (۷۱ نظر)
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="mt-15">
+                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این بدون شک یکی از
+                                                بهترین مواردی است که ما به اندازه کافی خوش شانس بوده ایم که روی آن کار
+                                                کنیم ، توجه به جزئیات ظاهری در کل ، و تحویل بسیار چشمگیر است.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <div class="img">
+                                                    <img alt="" src="assets/imgs/testim/3.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="ml-30">
+                                                <div class="info">
+                                                    <h6 class="main-color">
+                                                        مهرشاد دانش
+                                                    </h6>
+                                                    <span class="fz-13 mt-10 opacity-8">
+                                                        مشتری راست‌چین
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div>
+                                        <div class="cont mb-30">
+                                            <div class="d-flex align-items-center">
+                                                <div class="rate-stars fz-12">
+                                                    <span class="rate main-color">
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                    </span>
+                                                    <span class="fz-12 opacity-7 ml-10">
+                                                        (۷۱ نظر)
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="mt-15">
+                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این بدون شک یکی از
+                                                بهترین مواردی است که ما به اندازه کافی خوش شانس بوده ایم که روی آن کار
+                                                کنیم ، توجه به جزئیات ظاهری در کل ، و تحویل بسیار بصری است.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <div class="img">
+                                                    <img alt="" src="assets/imgs/testim/2.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="ml-30">
+                                                <div class="info">
+                                                    <h6 class="main-color">
+                                                        حامد حامدی
+                                                    </h6>
+                                                    <span class="fz-13 mt-10 opacity-8">
+                                                        مشتری راست چین
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div>
+                                        <div class="cont mb-30">
+                                            <div class="d-flex align-items-center">
+                                                <div class="rate-stars fz-12">
+                                                    <span class="rate main-color">
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                        <i class="fas fa-star">
+                                                        </i>
+                                                    </span>
+                                                    <span class="fz-12 opacity-7 ml-10">
+                                                        (۷۱ نظر)
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="mt-15">
+                                                ما هزاران مورد را به خوبی خریداری کرده ایم ، اما این بدون شک یکی از
+                                                بهترین مواردی است که ما به اندازه کافی خوش شانس بوده ایم که روی آن کار
+                                                کنیم ، توجه به جزئیات ظاهری در کل ، و تحویل بسیار بصری است.
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <div class="img">
+                                                    <img alt="" src="assets/imgs/testim/3.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="ml-30">
+                                                <div class="info">
+                                                    <h6 class="main-color">
+                                                        لئونارد هایزر
+                                                    </h6>
+                                                    <span class="fz-13 mt-10 opacity-8">
+                                                        مدیر برند
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-
+                    </div>
+                    <div class="swiper-pagination">
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
+        <!-- ==================== End Testimonials ==================== -->
+    </main>
+
 
 
 

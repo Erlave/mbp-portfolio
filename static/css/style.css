@@ -3493,12 +3493,12 @@ body.loaded {
   border-radius: 10px;
 }
 
-.portfolio .item .img {
+/* .portfolio .item .img {
   position: relative;
   z-index: 2;
   border-radius: 10px;
   overflow: hidden;
-}
+} */
 
 .portfolio .item .img a.link {
   position: absolute;
@@ -3507,6 +3507,14 @@ body.loaded {
   width: 100%;
   height: 100%;
 }
+.portfolio .item .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* میشه contain بزاری که کامل جا شه */
+  border-radius: 10px; /* برای اینکه با div همخونی داشته باشه */
+  display: block; /* تا خط سفید زیر img نیفته */
+}
+
 
 .portfolio .item .cont {
   padding: 20px 10px 10px;
@@ -3567,7 +3575,6 @@ body.loaded {
   stroke: var(--maincolor);
   fill: var(--maincolor);
 }
-
 .project .info {
   padding: 40px;
   position: relative;

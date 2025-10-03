@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block page_title %}portfolio{% endblock page_title %}
+
+
+
+
+
+
+
+{% block content %}
+
+
+
+        <!-- ==================== Start project ==================== -->
+        <section class="project section-padding radius-15">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="img mb-80">
+                            <img alt="" class="radius-5" src={{portfolio.img.url}} />
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="cont md-mb50">
+                                    <h3 class="mb-15 fw-500">
+                                        {{portfolio.title}}
+                                    </h3>
+
+                                   
+                                    <div class="mt-30">
+                                        <h6 class="mb-15 line-height-28">
+                                            {{portfolio.description}}
+                                        </h6>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div id="sticky_item">
+                                    <div class="info">
+                                        <ul>
+
+                                            <li class="mb-30">
+                                                <span class="sub-title">
+                                                    <i class="far fa-user mr-10">
+                                                    </i>
+                                                    مشتری:
+                                                </span>
+                                                <p>
+                                                    {{portfolio.customer}}
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <span class="sub-title">
+                                                    <i class="fab fa-github ">
+                                                    </i>
+                                                    لینک گیت هاب :
+                                                </span>
+                                                
+                                                    <p>
+                                                        <a href={{portfolio.url_github}}>
+                                                        click here !
+                                                        </a>
+                                                    </p>
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- ==================== End project ==================== -->
+    
+
+
+
+
+
+
+{% endblock content %}
