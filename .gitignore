@@ -10,7 +10,7 @@ pycache/
 
 # پایگاه داده محلی (sqlite3)
 mbp_db.sqlite3
-
+media/
 # لاگ‌ها
 *.log
 

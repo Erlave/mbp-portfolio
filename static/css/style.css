@@ -6062,4 +6062,12 @@ img.left {
 .swiper-wrapper {
   height: auto;
 }
+
+.item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 /* ====================== [ End Responsive ] ====================== */
