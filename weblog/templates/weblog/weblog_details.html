@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+
+
+{% block page_title %}Web Details{% endblock page_title %}
+
+
+{% block menu %}
+
+    <div class="fixed-menu">
+        <div class="menu-links mb-30 fz-18">
+            <a  data-tab="tab-1" href={% url "home" %}>
+                <span class="icon pe-7s-home">
+                </span>
+                <span class="text">
+                    خانه
+                </span>
+            </a>
+            <a  data-tab="tab-2" href={% url "port" %}>
+                <span class="icon pe-7s-portfolio">
+                </span>
+                <span class="text">
+                    نمونه کارها
+                </span>
+            </a>
+            <a class="active" href={% url "weblog" %}>
+                <span class="icon pe-7s-note">
+                </span>
+                <span class="text">
+                    وبلاگ
+                </span>
+            </a>
+            <a data-tab="tab-4" href={% url "con" %}>
+                <span class="icon pe-7s-map-marker">
+                </span>
+                <span class="text">
+                    تماس
+                </span>
+            </a>
+        </div>
+            {% include "media.html" %}
+    </div>
+{% endblock menu %}
+
+
+{% block content %}
+
+
+
+
+    <!-- ==================== End Navbar ==================== -->
+    <main>
+        <!-- ==================== Start Blogs ==================== -->
+        <section class="main-post section-padding">
+            <div class="container with-pad">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="caption text-center">
+  
+                            <h1 class="fz-55 mt-30">
+                                {{w.name}}
+                            </h1>
+                            <p class="sub-title mt-15">
+                                {{w.creator_name}} - {{w.created_at}}
+                            </p>
+                        </div>
+                        <div class="main-img mb-80 mt-40">
+                            <img alt="" class="radius-5" src={{w.image1.url}} />
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="cont">
+                            <div class="text mb-20">
+
+                                <p>
+                                    {{w.description}}
+                                </p>
+                            </div>
+
+                            <div class="title mt-30">
+                                <h5 class="fw-500">
+                                    {{w.q1}}
+                                </h5>
+                            </div>
+                            <div class="text mt-20">
+                                <p>
+                                    {{w.a1}}
+                                </p>
+                            </div>
+
+                            <div class="mb-50 mt-50">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="iner-img sm-mb30">
+                                            <img alt="" src={{w.image2.url}} />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="iner-img">
+                                            <img alt="" src={{w.image3.url}} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title mb-10">
+                                <h5 class="fw-500">
+                                    {{w.q2}}
+                                </h5>
+                            </div>
+                            <div class="text mb-20">
+                                <p>
+                                    {{w.a2}}
+                                </p>
+                            </div>
+
+                            <div class="title mb-10">
+                                <h5 class="fw-500">
+                                    {{w.q3}}
+                                </h5>
+                            </div>
+                            <div class="text mb-20">
+                                <p>
+                                    {{w.a3}}
+                                </p>
+                            </div>
+                            <div class="author-area mt-50">
+                                <div class="flex">
+                                    <div class="author-img mr-30">
+                                        <div class="img">
+                                            <img alt="" class="circle-img" src={{w.creator_img.url}} />
+                                        </div>
+                                    </div>
+                                    <div class="cont valign">
+                                        <div class="full-width">
+                                            <h6 class="fw-500 mb-10">
+                                                {{w.creator_name}}
+                                            </h6>
+                                            <p>
+                                               {{w.creator_des}}  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-area flex mt-20 pb-20 pt-20 bord-thin-top bord-thin-bottom">
+                                <div>
+
+                                </div>
+                                <div class="ml-auto">
+                                    <div class="share-icon flex">
+                                        <div class="valign">
+                                            <span>
+                                                اشتراک گذاری:
+                                            </span>
+                                        </div>
+                                        <div>
+
+                                        
+                                            <a id="copy-link-btn" href="#">
+                                                <i class="fa fa-share-alt">
+                                                </i>
+                                            </a>
+
+                                        
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <script>
+                            document.getElementById("copy-link-btn").addEventListener("click", function () {
+                                // گرفتن لینک فعلی صفحه
+                                const productUrl = window.location.href;
+
+                                // استفاده از API جدید کلیپ‌بورد
+                                navigator.clipboard.writeText(productUrl).then(function () {
+                                    document.getElementById("copy-msg").style.display = "block";
+                                    setTimeout(() => {
+                                        document.getElementById("copy-msg").style.display = "none";
+                                    }, 2000);
+                                }).catch(function (err) {
+                                    console.error("خطا در کپی کردن لینک:", err);
+                                });
+                            });
+                        </script>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== End Blogs ==================== -->
+    </main>
+    <!-- ==================== Start Footer ==================== -->
+
+
+
+{% endblock content %}

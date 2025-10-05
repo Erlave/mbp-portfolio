@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block page_title %}weblog{% endblock page_title %}
 
 
@@ -42,98 +42,126 @@
 
 {% block content %}
 
-        <section class="min-box pt-40">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-10">
-
-                                                <div class="min-sec " id="tab-3">
-                            <!-- ==================== Start Blog ==================== -->
-                            <div class="blog pt-80 pb-80">
-                                <div class="sec-head mb-50 wow fadeIn">
-                                    <div class="sub-title-icon d-flex align-items-center">
-                                        <span class="icon pe-7s-note">
-                                        </span>
-                                        <h6>
-                                            وبلاگ های من
-                                        </h6>
-                                    </div>
-                                    <h4 class="fz-28 text-u fw-600">
-                                        آخرین اخبار
-                                    </h4>
-                                </div>
-                                <div>
-                                    <div class="item pb-50 mb-50 bord-thin-bottom wow fadeIn" data-wow-delay=".2s">
-                                        <div class="img">
-                                            <img alt="" src="assets/imgs/blog/1.jpg" />
-                                        </div>
-                                        <div class="cont mt-30">
-                                            <span class="date mb-15">
-                                                ۲۰ ژوئیه ۲۰۲۰
-                                            </span>
-                                            <h5 class="mb-15 fw-600">
-                                                <a href="blog-details.html">
-                                                    ۱۲ نکته برای رهبری یک شرکت خارق العاده
-                                                </a>
-                                            </h5>
-                                            <p>
-                                                بسیار جالب توجه به استقبال برطرف شد.بنابراین به سمت شمال با توجه به توجه
-                                                به خانواده ، توجه.تعالی با قاطعیت مرد و در عین حال تصور می شود که به طرز
-                                                چشمگیری در تضاد است.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="item pb-50 mb-50 bord-thin-bottom wow fadeIn" data-wow-delay=".4s">
-                                        <div class="img">
-                                            <img alt="" src="assets/imgs/blog/2.jpg" />
-                                        </div>
-                                        <div class="cont mt-30">
-                                            <span class="date mb-15">
-                                                ۲۰ ژوئیه ۲۰۲۰
-                                            </span>
-                                            <h5 class="mb-15 fw-600">
-                                                <a href="blog-details.html">
-                                                    ۱۲ نکته برای رهبری یک شرکت خارق العاده
-                                                </a>
-                                            </h5>
-                                            <p>
-                                                بسیار جالب توجه به استقبال برطرف شد.بنابراین به سمت شمال با توجه به توجه
-                                                به خانواده ، توجه.تعالی با قاطعیت مرد و در عین حال تصور می شود که به طرز
-                                                چشمگیری در تضاد است.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="item wow fadeIn" data-wow-delay=".6s">
-                                        <div class="img">
-                                            <img alt="" src="assets/imgs/blog/3.jpg" />
-                                        </div>
-                                        <div class="cont mt-30">
-                                            <span class="date mb-15">
-                                                ۲۰ ژوئیه ۲۰۲۰
-                                            </span>
-                                            <h5 class="mb-15 fw-600">
-                                                <a href="blog-details.html">
-                                                    ۱۲ نکته برای رهبری یک شرکت خارق العاده
-                                                </a>
-                                            </h5>
-                                            <p>
-                                                بسیار جالب توجه به استقبال برطرف شد.بنابراین به سمت شمال با توجه به توجه
-                                                به خانواده ، توجه.تعالی با قاطعیت مرد و در عین حال تصور می شود که به طرز
-                                                چشمگیری در تضاد است.
-                                            </p>
-                                        </div>
-                                    </div>
+    <!-- ==================== End Navbar ==================== -->
+    <main class="pt-80">
+        <!-- ==================== Start Blogs ==================== -->
+        <section class="blog section-padding">
+            <div class="container with-pad">
+                <div class="sec-head mb-80">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="d-inline-block">
+                                <div class="sub-title-icon d-flex align-items-center">
+                                    <span class="icon pe-7s-note">
+                                    </span>
+                                    <h6>
+                                        وبلاگ های من
+                                    </h6>
                                 </div>
                             </div>
-                            <!-- ==================== End Blog ==================== -->
+                            <h3>
+                                کاوش
+                                <br />
+                                جهان از طریق وبلاگ ما
+                            </h3>
                         </div>
+                    </div>
+                </div>
+                <div class="row lg-marg justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="md-mb80">
+                            {% for weblog in weblogs %}
+                            <div class="item pb-50 mb-50 bord-thin-bottom">
+                                <div class="img">
+                                    <img alt="" src={{weblog.image1.url}} />
+                                </div>
+                                <div class="cont mt-30">
+                                    <span class="date mb-10">
+                                        {{weblog.created_at}}
+                                    </span>
+                                    <h4 class="mb-15">
+                                        <a href={% url 'weblog_detail' weblog.slug %}>
+                                            {{weblog.name}}
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        {{weblog.short_description}}
+                                    </p>
+                                </div>
+                            </div>
+                            {% endfor %}
 
 
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+                            <form>
+                                <div class="search-box">
+                                    <input id="searchInput" name="q" value="{{ search_query }}" placeholder="جستجو" type="text" />
+                                    <span class="icon pe-7s-search">
+                                    </span>
+                                </div>
+                            </form>
+
+                            <div class="widget catogry">
+                                <h6 class="title-widget">
+                                    دسته
+                                </h6>
+                                <ul class="rest">
+                                    {% for cat in categories %}
+                                    <li>
+                                        <span>
+                                            <a  href="{% url "weblog" %}?category={{cat.id}}">
+                                                {{cat.name}}
+                                            </a>
+                                        </span>
+                                        <span class="ml-auto">
+                                            {{ cat.products.count }}
+                                        </span>
+                                    </li>
+                                    {% endfor %}
+
+                                </ul>
+                            </div>
+                            {% if newest %}
+                            <div class="widget last-post-thum">
+                                <h6 class="title-widget">
+                                    آخرین پست ها
+                                </h6>
+                                {% for newest in newest %}
+                                <div class="item">
+                                    <div class="valign">
+                                        <div class="img">
+                                            <a href="blogs.html">
+                                                <img alt="" src={{newest.image1.url}} />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="cont">
+                                        <h6>
+                                            <a href="blogs.html">
+                                                {{newest.name}}
+                                            </a>
+                                        </h6>
+                                        <span>
+                                            <a href="blogs.html">
+                                               {{newest.created_at}}
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
+        <!-- ==================== End Blogs ==================== -->
+    </main>
+    <!-- ==================== Start Footer ==================== -->
 
 {% endblock content %}

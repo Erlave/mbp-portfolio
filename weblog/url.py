@@ -3,5 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('' ,views.weblog, name='weblog'),
+    path('' ,views.WeblogListView.as_view(), name='weblog'),
+    path('<slug:slug>/', views.weblogDetailsView.as_view(), name='weblog_detail'),
 ]
