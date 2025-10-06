@@ -3446,10 +3446,10 @@ body.loaded {
 
 /* Portfolio
 -----------------------------------------------------------------*/
-.portfolio .gallery {
+/* .portfolio .gallery {
   margin-right: -15px;
   margin-left: -15px;
-}
+} */
 
 .portfolio .items {
   margin-top: 40px;
@@ -6071,3 +6071,14 @@ img.left {
 }
 
 /* ====================== [ End Responsive ] ====================== */
+.sub-title span {
+  margin: 0 3px;
+}
+
+.main-img img {
+  display: block;
+  margin: 0 auto;          /* وسط‌چین */
+  max-width: 100%;         /* از container بزرگ‌تر نشه */
+  height: auto;            /* تناسب حفظ بشه */
+  border-radius: 5px;      /* همون radius-5 که داری */
+}

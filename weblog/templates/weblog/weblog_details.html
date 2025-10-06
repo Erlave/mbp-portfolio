@@ -61,8 +61,10 @@
                                 {{w.name}}
                             </h1>
                             <p class="sub-title mt-15">
-                                {{w.creator_name}} - {{w.created_at}}
-                            </p>
+                                <span>{{ w.creator_name }}</span>
+                                <span>-</span>
+                                <span>{{ w.created_at|date:"j F Y" }}</span>
+                              </p>
                         </div>
                         <div class="main-img mb-80 mt-40">
                             <img alt="" class="radius-5" src={{w.image1.url}} />
