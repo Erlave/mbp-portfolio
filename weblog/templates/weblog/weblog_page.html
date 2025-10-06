@@ -73,7 +73,7 @@
                             {% for weblog in weblogs %}
                             <div class="item pb-50 mb-50 bord-thin-bottom">
                                 <div class="img">
-                                    <img alt="" src={{weblog.image1.url}} />
+                                    <img alt="" href={% url 'weblog_detail' weblog.slug %} src={{weblog.image1.url}} />
                                 </div>
                                 <div class="cont mt-30">
                                     <span class="date mb-10">
@@ -133,19 +133,19 @@
                                 <div class="item">
                                     <div class="valign">
                                         <div class="img">
-                                            <a href="blogs.html">
+                                            <a href={% url 'weblog_detail' newest.slug %}>
                                                 <img alt="" src={{newest.image1.url}} />
                                             </a>
                                         </div>
                                     </div>
                                     <div class="cont">
                                         <h6>
-                                            <a href="blogs.html">
+                                            <a href={% url 'weblog_detail' newest.slug %}>
                                                 {{newest.name}}
                                             </a>
                                         </h6>
                                         <span>
-                                            <a href="blogs.html">
+                                            <a href={% url 'weblog_detail' newest.slug %}>
                                                {{newest.created_at}}
                                             </a>
                                         </span>

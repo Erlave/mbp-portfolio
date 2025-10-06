@@ -41,8 +41,9 @@ class Weblog(models.Model):
     creator_name=models.CharField(("اسم سازتده"), max_length=50)
     creator_des=models.TextField(("توضیح سازنده"))
     slug = models.SlugField(default='' , blank=True, db_index=True, verbose_name='url عنوان در ')
-    created_at = models.CharField(("تاریخ"), max_length=50)
-    created_at = models.DateTimeField(null=True , blank=True, auto_now_add=True)
+
+    created_at = models.DateField(null=True, blank=True, auto_now_add=True)
+
 
 
 

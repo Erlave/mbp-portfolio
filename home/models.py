@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class work_area(models.Model):
-    title=models.CharField(("سلام من ... هستم"), max_length=50)
+    title=models.CharField( max_length=50 , verbose_name= "باکس مهارت")
     is_active=models.BooleanField(("فعال/ غیر فعال") , default=False)
     class Meta:
         verbose_name = 'حوزه کاری'
@@ -38,7 +38,8 @@ class home_model (models.Model):
 class services (models.Model):
     title=models.CharField(("خدمات که ارائه میدی"), max_length=50)
     projects=models.CharField(("تعداد پروژه که انجام دادی"), max_length=50)
-    icon=models.CharField(("اسم به اینگلیسی برای ایکون"),default="default-icon", max_length=50)
+    icon=models.CharField(("اسم به اینگلیسی برای ایکون"),null=True,blank=True,default="default-icon", max_length=50)
+    icon_img=models.ImageField(("یا افضودن عکس"), upload_to="iconlogo/",null=True,blank=True, height_field=None, width_field=None, max_length=None)
     descreption=models.CharField(("توضیحات"), max_length=200)
     url=models.URLField(("لینک برای بیشتر بخوانید"),default="default-url", max_length=200)
 
@@ -54,7 +55,8 @@ class services (models.Model):
 
 class my_ability(models.Model):
     title=models.CharField(("مهارتت"), max_length=50)
-    icon =models.CharField(("اسم مهارت به اینگلیسی برای ایکون"),default="default-icon", max_length=50)
+    icon =models.CharField(("اسم مهارت به اینگلیسی برای ایکون"),null=True,blank=True,default="default-icon", max_length=50)
+    icon_img=models.ImageField(("یا افضودن عکس"), upload_to="iconlogo/",null=True,blank=True, height_field=None, width_field=None, max_length=None)
     percent=models.CharField(("درصد بلدی شما"), max_length=50)
 
     is_active=models.BooleanField(("فعال /غیر فعال") ,default=False)

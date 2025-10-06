@@ -19,8 +19,13 @@
                                                 <div class="d-flex align-items-center mb-30">
                                                     <div>
                                                         <span class="icon-img-50 mr-30">
-                                                            {% comment %} <img alt="" src="assets/imgs/serv-img/3.png" /> {% endcomment %}
+                                                            {% if serv.icon_img %}
+                                                             <img alt="" src={{serv.icon_img.url}} /> 
+                                                             {% else %}
+                                                            
+
                                                             <i class="devicon-{{serv.icon}}-plain colored" style="font-size: 55px;"></i>
+                                                            {% endif %}
                                                         </span>
                                                     </div>
                                                     <div>
