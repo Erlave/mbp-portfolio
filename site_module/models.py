@@ -13,7 +13,9 @@ class site_model (models.Model):
     instagram_link =models.URLField(("لینک اینستاگرام"), max_length=200)
     linkdin_link = models.URLField(("لینک لینکدین"), max_length=200)
 
-    copyright_text=models.CharField(("متن کپی رایت"),default="default-copyright_text", max_length=50)
+    copyright_text=models.CharField(("متن کپی رایت"),default="", max_length=50)
+    copy=models.CharField(("متن کپی رایت لینک"),default="", max_length=50)
+    copy_url=models.URLField(("لینک کپی رایت"),default="", max_length=200)
 
     is_main_setting=models.BooleanField(("تنضیمات اصلی") ,default=False)
 
