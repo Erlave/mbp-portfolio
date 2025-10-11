@@ -193,6 +193,15 @@ a, a:hover {
   color: inherit;
 }
 
+a, a:hover {
+  color: inherit;
+}
+
+
+.link {
+
+  color: #28e98c;
+}
 span {
   display: inline-block;
 }
@@ -247,7 +256,7 @@ figure {
 }
 
 img {
-  width: 200%;
+  width: 100%;
   height: auto;
 }
 
@@ -1753,6 +1762,8 @@ body.loaded {
   pointer-events: none;
   border-radius: 30px;
 }
+
+
 
 .left-area .menu-links:after {
   content: '';
@@ -3939,7 +3950,7 @@ body.loaded {
 }
 
 .contact .info .item h4 {
-  font-size: 16px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

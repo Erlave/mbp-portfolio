@@ -94,16 +94,20 @@
 
                             <div class="mb-50 mt-50">
                                 <div class="row">
+                                    {% if w.image2 %}
                                     <div class="col-sm-6">
                                         <div class="iner-img sm-mb30">
                                             <img alt="" src={{w.image2.url}} />
                                         </div>
                                     </div>
+                                    {% endif %}
+                                    {% if w.image3 %}
                                     <div class="col-sm-6">
                                         <div class="iner-img">
                                             <img alt="" src={{w.image3.url}} />
                                         </div>
                                     </div>
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="title mb-10">
